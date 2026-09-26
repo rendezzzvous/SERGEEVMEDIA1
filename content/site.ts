@@ -1,5 +1,5 @@
 // Бренд, домен, CDN, контакты, флаги. NEXT_PUBLIC_* инлайнятся при сборке → смена = пересборка.
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://sergeev.example').replace(/\/$/, '') // TODO домен
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://sergeev.media').replace(/\/$/, '')
 export const CDN_BASE = (
   process.env.NEXT_PUBLIC_CDN_BASE ?? 'https://pub-be8d4a5abc704b2191aa35c87855b98e.r2.dev'
 ).replace(/\/$/, '') // Cloudflare R2, бакет sergeev-media (scripts/upload-r2.sh)

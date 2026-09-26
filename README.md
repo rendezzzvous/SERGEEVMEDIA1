@@ -48,7 +48,7 @@ pnpm check          # lint + typecheck + build
 
 ```bash
 docker build -t sergeev-landing \
-  --build-arg NEXT_PUBLIC_SITE_URL=https://example.com \
+  --build-arg NEXT_PUBLIC_SITE_URL=https://sergeev.media \
   --build-arg NEXT_PUBLIC_CDN_BASE=https://cdn.example.com/sergeev .
 
 # опциональные build-time секреты (приватный реестр, Sentry)

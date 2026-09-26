@@ -21,7 +21,7 @@ ARG PNPM_VERSION
 WORKDIR /app
 ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1
 # NEXT_PUBLIC_* инлайнятся в бандл при сборке → смена домена/CDN = пересборка
-ARG NEXT_PUBLIC_SITE_URL=https://sergeev.example
+ARG NEXT_PUBLIC_SITE_URL=https://sergeev.media
 ARG NEXT_PUBLIC_CDN_BASE=https://pub-be8d4a5abc704b2191aa35c87855b98e.r2.dev
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL NEXT_PUBLIC_CDN_BASE=$NEXT_PUBLIC_CDN_BASE
 RUN npm i -g pnpm@${PNPM_VERSION}
