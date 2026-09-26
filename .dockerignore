@@ -1,0 +1,16 @@
+node_modules
+.next
+.git
+.gitignore
+secrets
+videos
+out-media
+scripts
+*.md
+!README.md
+.env*
+!.env.example
+Dockerfile
+compose.yaml
+.dockerignore
+public/media

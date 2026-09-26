@@ -1,0 +1,95 @@
+// Источник истины для UI-строк. en.ts обязан иметь ту же форму (satisfies Dictionary).
+const ru = {
+  meta: {
+    title: 'SERGEEV — видеомонтажёр',
+    description:
+      'Съёмка и монтаж Reels, Shorts и TikTok для брендов, недвижимости и артистов. Ролики, которые работают, — и выглядят красиво.',
+  },
+  nav: { work: 'Работы', about: 'Обо мне', services: 'Услуги', contact: 'Контакт' },
+  hud: {
+    rec: 'REC',
+    sections: {
+      '00': 'HERO',
+      '01': 'FORMATS',
+      '02': 'SHORTS',
+      '03': 'ГОРИЗОНТ',
+      '04': 'ОБО МНЕ',
+      '05': 'УСЛУГИ',
+      '06': 'ПРОЦЕСС',
+      '07': 'ЦИФРЫ',
+      '08': 'КОНТАКТ',
+    },
+  },
+  cursor: { play: 'PLAY', open: 'OPEN', drag: 'DRAG' },
+  hero: {
+    role: 'монтажёр',
+    roleAlt: 'video editor',
+    tags: 'reels · youtube · commercial · clips',
+    scroll: 'SCROLL ↓',
+    work: 'Смотреть работы',
+    watch: 'Смотреть шоурил',
+  },
+  marquee: ['REELS', 'SHORTS', 'YOUTUBE', 'РЕКЛАМА', 'КЛИПЫ', 'TIKTOK'],
+  shorts: {
+    title: 'Вертикаль',
+    lead: 'Reels, Shorts, TikTok — первые три секунды решают всё.',
+    hint: 'Листай →',
+    views: 'просм.',
+  },
+  long: {
+    title: 'Горизонт',
+    lead: 'Горизонтальный формат: YouTube, реклама, влоги — длинная дистанция и точный ритм.',
+    play: 'Смотреть',
+  },
+  about: { title: 'Обо мне', portraitAlt: 'Портрет монтажёра SERGEEV', intro: 'Смотреть интро' },
+  services: {
+    title: 'Услуги',
+    from: 'от',
+    onRequest: 'по запросу',
+    currency: 'rub' as 'rub' | 'usd',
+    note: 'Цена зависит от объёма исходников, графики и сроков. Точную — назову после брифа.',
+  },
+  process: { title: 'Процесс' },
+  numbers: { title: 'Цифры', clients: 'Работал с' },
+  contact: {
+    headline: 'НАПИШИ',
+    lead: 'Расскажите о задаче — отвечу в течение дня.',
+    direct: 'Напрямую',
+    soon: 'скоро',
+    form: {
+      name: 'Имя',
+      contact: 'Контакт',
+      contactHint: 'Telegram, email или телефон',
+      message: 'Задача',
+      messageHint: 'Что за видео, площадка, сроки, референсы',
+      budget: 'Бюджет',
+      optional: 'необязательно',
+      submit: 'Отправить',
+      sending: 'Отправка…',
+      sent: 'SENT ✓',
+      sentNote: 'Заявка у меня. Скоро отвечу.',
+      again: 'Отправить ещё',
+      error: 'Не получилось отправить. Напишите напрямую в Telegram.',
+      rateLimited: 'Слишком много заявок подряд. Попробуйте позже.',
+      errors: {
+        name: 'Минимум 2 символа',
+        contact: 'Укажите, как с вами связаться',
+        message: 'Опишите задачу чуть подробнее (от 10 символов)',
+        budget: 'Слишком длинно',
+      },
+    },
+  },
+  lightbox: {
+    close: 'Закрыть',
+    play: 'Play',
+    pause: 'Pause',
+    mute: 'Mute',
+    unmute: 'Sound',
+    seek: 'Перемотка',
+  },
+  footer: { top: '↑ TOP', rights: 'Все права защищены' },
+  localeName: { ru: 'RU', en: 'EN' },
+}
+
+export type Dictionary = typeof ru
+export default ru

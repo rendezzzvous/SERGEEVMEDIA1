@@ -1,0 +1,4 @@
+# Локальная проверка контейнера: docker compose -f compose.yaml -f compose.local.yaml up -d --build
+services:
+  web:
+    ports: ['3000:3000']

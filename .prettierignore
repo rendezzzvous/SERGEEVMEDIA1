@@ -1,0 +1,8 @@
+.next
+node_modules
+pnpm-lock.yaml
+public
+# Компактная запись портфолио читается проще — не разворачиваем
+content/videos.ts
+AGENTS.md
+CLAUDE.md

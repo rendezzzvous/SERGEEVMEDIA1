@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,23 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# secrets (runtime, only on the VPS)
+/secrets/*
+!/secrets/README.md
+!/secrets/*.example
+
+# local media
+/videos
+/out-media
+
+# локальный просмотр видео: public/media -> ../out-media
+/public/media
+
+# видео — только на CDN (Cloudflare R2), никогда в git
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.m4v
+*.webm
