@@ -6,16 +6,24 @@ import type { L10n, VideoItem } from './types'
 export const videos: VideoItem[] = [
   // ── Вертикальные: Reels / Shorts / TikTok ──
   {
+    id: 'inresta-villa', kind: 'short', src: 'shorts/inresta-villa.mp4', preview: 'previews/inresta-villa.mp4', poster: 'posters/inresta-villa.jpg',
+    title: { ru: 'Люкс-вилла', en: 'Luxury villa' }, client: 'Inresta Real Estate', year: 2025, duration: '0:58',
+  },
+  {
+    id: 'baran-sea', kind: 'short', src: 'shorts/baran-sea.mp4', preview: 'previews/baran-sea.mp4', poster: 'posters/baran-sea.jpg',
+    title: { ru: 'Сниппет у моря', en: 'Seaside snippet' }, client: 'Baran', year: 2026, duration: '0:25',
+  },
+  {
+    id: 'lebo-artfact', kind: 'short', src: 'shorts/lebo-artfact.mp4', preview: 'previews/lebo-artfact.mp4', poster: 'posters/lebo-artfact.jpg',
+    title: { ru: 'Art&Fact × Lebo: 14 февраля', en: 'Art&Fact × Lebo: Valentine’s' }, client: 'Lebo Coffee', year: 2025, duration: '0:14',
+  },
+  {
     id: 'lebo-recipe', kind: 'short', src: 'shorts/lebo-recipe.mp4', preview: 'previews/lebo-recipe.mp4', poster: 'posters/lebo-recipe.jpg',
     title: { ru: 'Повтори рецепт', en: 'Repeat the recipe' }, client: 'Lebo Coffee', year: 2025, duration: '0:50',
   },
   {
     id: 'baran-yacht', kind: 'short', src: 'shorts/baran-yacht.mp4', preview: 'previews/baran-yacht.mp4', poster: 'posters/baran-yacht.jpg',
     title: { ru: 'Сниппет на яхте', en: 'Yacht snippet' }, client: 'Baran', year: 2026, duration: '0:37',
-  },
-  {
-    id: 'inresta-villa', kind: 'short', src: 'shorts/inresta-villa.mp4', preview: 'previews/inresta-villa.mp4', poster: 'posters/inresta-villa.jpg',
-    title: { ru: 'Люкс-вилла', en: 'Luxury villa' }, client: 'Inresta Real Estate', year: 2025, duration: '0:58',
   },
   {
     id: 'toma-street-math', kind: 'short', src: 'shorts/toma-street-math.mp4', preview: 'previews/toma-street-math.mp4', poster: 'posters/toma-street-math.jpg',
@@ -30,20 +38,12 @@ export const videos: VideoItem[] = [
     title: { ru: 'Рум-тур: Horizon', en: 'Room tour: Horizon' }, client: 'Cyprus Life', year: 2026, duration: '0:59',
   },
   {
-    id: 'lebo-top3', kind: 'short', src: 'shorts/lebo-top3.mp4', preview: 'previews/lebo-top3.mp4', poster: 'posters/lebo-top3.jpg',
-    title: { ru: 'Топ-3 самых дорогих сортов', en: 'Top 3 priciest coffees' }, client: 'Lebo Coffee', year: 2025, duration: '0:42',
-  },
-  {
-    id: 'baran-sea', kind: 'short', src: 'shorts/baran-sea.mp4', preview: 'previews/baran-sea.mp4', poster: 'posters/baran-sea.jpg',
-    title: { ru: 'Сниппет у моря', en: 'Seaside snippet' }, client: 'Baran', year: 2026, duration: '0:25',
+    id: 'luxbeauty-before-after', kind: 'short', src: 'shorts/luxbeauty-before-after.mp4', preview: 'previews/luxbeauty-before-after.mp4', poster: 'posters/luxbeauty-before-after.jpg',
+    title: { ru: 'До / после', en: 'Before / after' }, client: 'Lux Beauty', year: 2026, duration: '0:16',
   },
   {
     id: 'toma-sims', kind: 'short', src: 'shorts/toma-sims.mp4', preview: 'previews/toma-sims.mp4', poster: 'posters/toma-sims.jpg',
     title: { ru: 'Репетитор в The Sims', en: 'Tutor in The Sims' }, client: 'Тома', year: 2026, duration: '0:17',
-  },
-  {
-    id: 'lebo-artfact', kind: 'short', src: 'shorts/lebo-artfact.mp4', preview: 'previews/lebo-artfact.mp4', poster: 'posters/lebo-artfact.jpg',
-    title: { ru: 'Art&Fact × Lebo: 14 февраля', en: 'Art&Fact × Lebo: Valentine’s' }, client: 'Lebo Coffee', year: 2025, duration: '0:14',
   },
   {
     id: 'inresta-ny2025', kind: 'short', src: 'shorts/inresta-ny2025.mp4', preview: 'previews/inresta-ny2025.mp4', poster: 'posters/inresta-ny2025.jpg',
@@ -52,6 +52,10 @@ export const videos: VideoItem[] = [
   {
     id: 'lebo-march8', kind: 'short', src: 'shorts/lebo-march8.mp4', preview: 'previews/lebo-march8.mp4', poster: 'posters/lebo-march8.jpg',
     title: { ru: 'Не забыл про подарок?', en: 'Didn’t forget the gift?' }, client: 'Lebo Coffee', year: 2025, duration: '0:08',
+  },
+  {
+    id: 'lebo-top3', kind: 'short', src: 'shorts/lebo-top3.mp4', preview: 'previews/lebo-top3.mp4', poster: 'posters/lebo-top3.jpg',
+    title: { ru: 'Топ-3 самых дорогих сортов', en: 'Top 3 priciest coffees' }, client: 'Lebo Coffee', year: 2025, duration: '0:42',
   },
 
   // ── Горизонтальные ──
