@@ -28,10 +28,11 @@ PRESET=medium scripts/encode-portfolio.sh ~/Downloads/Видео
 с `content/videos.ts`. Готовые файлы пропускаются, `ONLY=<id>` пересобирает один. Там же собирается hero:
 пока нет шоурила — немой автомонтаж из трёх колонок вертикалок (`hero/montage.mp4`) и интро «Обо мне».
 
-## Посмотреть локально с настоящими видео
+## Посмотреть локально без CDN
 
-`public/media` — ссылка на `../out-media` (в git и Docker-образ не попадает), а `.env.local` задаёт
-`NEXT_PUBLIC_CDN_BASE=/media`. Достаточно `pnpm dev`. Для продакшна видео всё равно нужен CDN (ниже).
+По умолчанию сайт берёт видео из R2. Чтобы смотреть свежесобранные файлы до заливки: `public/media` — ссылка
+на `../out-media` (в git и Docker-образ не попадает), плюс `.env.local` с `NEXT_PUBLIC_CDN_BASE=/media`,
+затем `pnpm dev`.
 
 ## Пример: один шорт
 
@@ -50,7 +51,23 @@ scripts/encode-previews.sh raw/showreel.mov out-media/previews/l01.mp4 12
 scripts/posters.sh         out-media/long/l01.mp4 out-media/posters/l01 4
 ```
 
-## Заливка
+## Заливка в Cloudflare R2
+
+```bash
+npx wrangler login              # один раз
+scripts/upload-r2.sh            # бакет sergeev-media → https://pub-be8d4a5abc704b2191aa35c87855b98e.r2.dev
+```
+
+Скрипт сам создаёт бакет и публичный r2.dev-URL, повторяет упавшие загрузки. Файлы крупнее ~50 МБ wrangler
+заливает ненадёжно — см. «Большие файлы» ниже.
+
+### Большие файлы
+
+wrangler заливает объект одним запросом, и файлы крупнее ~60 МБ у нас падали с `fetch failed`. Поэтому
+горизонтали кодируются с потолком 2,8 Мбит/с (2,5-минутный влог ≈ 56 МБ). Если ролик всё равно вышел больше —
+заливайте его через rclone ниже: он режет файл на части (multipart).
+
+## Заливка через rclone (любой S3)
 
 ```bash
 RCLONE_REMOTE=r2:sergeev-media scripts/upload-cdn.sh

@@ -6,7 +6,7 @@ services:
       context: .
       args:
         NEXT_PUBLIC_SITE_URL: '${NEXT_PUBLIC_SITE_URL:-https://sergeev.example}'
-        NEXT_PUBLIC_CDN_BASE: '${NEXT_PUBLIC_CDN_BASE:-https://cdn.example.com/sergeev}'
+        NEXT_PUBLIC_CDN_BASE: '${NEXT_PUBLIC_CDN_BASE:-https://pub-be8d4a5abc704b2191aa35c87855b98e.r2.dev}'
       # Build-time секрет для RUN --mount=type=secret,id=npmrc (раскомментировать + блок внизу)
       # secrets: [npmrc]
     image: sergeev-landing:latest
