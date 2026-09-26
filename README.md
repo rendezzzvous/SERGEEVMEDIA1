@@ -49,7 +49,7 @@ pnpm check          # lint + typecheck + build
 ```bash
 docker build -t sergeev-landing \
   --build-arg NEXT_PUBLIC_SITE_URL=https://sergeev.media \
-  --build-arg NEXT_PUBLIC_CDN_BASE=https://cdn.example.com/sergeev .
+  --build-arg NEXT_PUBLIC_CDN_BASE=https://pub-be8d4a5abc704b2191aa35c87855b98e.r2.dev .
 
 # опциональные build-time секреты (приватный реестр, Sentry)
 docker build --secret id=npmrc,src=$HOME/.npmrc --secret id=SENTRY_AUTH_TOKEN -t sergeev-landing .
